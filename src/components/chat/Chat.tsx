@@ -5,11 +5,11 @@ import { collection, orderBy, query } from "firebase/firestore"
 import { useSession } from "next-auth/react"
 import { useCollection } from "react-firebase-hooks/firestore"
 import Message from "./Message"
+import { ArrowDownCircleIcon } from "@heroicons/react/24/outline"
 
 type Props = {
   id: string
 }
-
 
 export default function Chat({id}: Props) {
 
@@ -19,11 +19,14 @@ export default function Chat({id}: Props) {
   )
   
   return (
-    <div className='flex-1 overflow-y-auto text-white'>
+    <div className='flex-1 overflow-y-auto text-white scrollbar-hide'>
        {
         messages?.empty && (
-          <div className="flex items-center py-10 justify-center font-bold">
-            <h1>Ask anything to ChatGPT!</h1>
+          <div className="flex items-center py-10 justify-center font-bold p-1 text-center">
+            <p className="flex items-center md:text-2xl justify-center flex-col gap-2">
+              Ask anything to ChatGPT
+              <ArrowDownCircleIcon className="h-8 w-8 md:h-10 md:w-10 animate-bounce" />
+            </p>
           </div>
         )
       }

@@ -59,7 +59,7 @@ export default function ChatInput({id}: Props) {
         onChange={(e) => setInput(e.target.value)}
         type="text" 
         placeholder='Enter your message...'
-        className='flex-1 bg-transparent outline-none' 
+        className='md:flex-1 bg-transparent outline-none' 
         />
         <button
         disabled={!input}

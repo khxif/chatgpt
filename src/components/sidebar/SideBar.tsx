@@ -17,7 +17,7 @@ export default function SideBar() {
   
   
   return (
-    <div className='p-2  max-w-xs md:min-w-[20rem] flex flex-col h-screen space-y-2 overflow-y-auto'>
+    <div className='p-2  max-w-xs md:min-w-[20rem] flex flex-col h-screen space-y-2 overflow-y-auto scrollbar-hide'>
       <div className="">
         <NewChat />
       </div>
