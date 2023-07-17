@@ -22,15 +22,15 @@ export default async function RootLayout({children}: Props) {
   
   return (
     <html lang="en">
-      <body className='overflow-hidden'>
+      <body className=''>
         <Provider session={session}>
         {
           session? (
-            <div className="flex h-screen">
-              <div className='bg-[#202123]'>
+            <div className="flex overflow-hidden h-screen">
+              <div className='bg-[#202123] '>
                 <SideBar />
               </div>
-            <div className='flex-1 bg-[#343541]'>
+            <div className='flex-1 bg-[#343541] overflow-y-auto'>
               <Toaster position='top-right' />
               {children}
             </div>
